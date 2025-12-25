@@ -26,10 +26,6 @@ pipeline {
         }
         
         stage('Deploy') {
-            when {
-                // Sadece önceki stage başarılıysa çalışır
-                // Test başarısız olursa pipeline zaten fail olur
-            }
             steps {
                 echo 'Deploy adımı çalıştırılıyor...'
                 script {
