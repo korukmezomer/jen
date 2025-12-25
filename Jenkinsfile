@@ -3,6 +3,9 @@ pipeline {
     
     stages {
         stage('Build') {
+            when {
+                branch 'main'
+            }
             steps {
                 echo 'Proje derleniyor...'
                 sh 'mvn clean compile'
@@ -10,6 +13,9 @@ pipeline {
         }
         
         stage('Test - URL Erişilebilirlik Kontrolü') {
+            when {
+                branch 'main'
+            }
             steps {
                 echo 'URL erişilebilirlik testi çalıştırılıyor...'
                 sh 'mvn test -Dtest=UrlAccessibilityTest'
@@ -26,6 +32,9 @@ pipeline {
         }
         
         stage('Deploy') {
+            when {
+                branch 'main'
+            }
             steps {
                 echo 'Deploy adımı çalıştırılıyor...'
                 script {
