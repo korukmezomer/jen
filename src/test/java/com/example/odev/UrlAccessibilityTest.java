@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("URL Erişilebilirlik Testi")
 class UrlAccessibilityTest {
 
-    private static final String TARGET_URL = "https://example.com";
+    private static final String TARGET_URL = "https://this-url-does-not-exist-12345.com";
     private static final int TIMEOUT_MS = 5000; // 5 saniye timeout
 
     @Test
